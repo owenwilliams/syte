@@ -1,11 +1,11 @@
 
-DEPLOYMENT_MODE = 'dev'
+DEPLOYMENT_MODE = 'prod'
 COMPRESS_REVISION_NUMBER = '1.0'
 
 #Blog Integration: Tumblr
-TUMBLR_BLOG_URL = '[ENTER TUMBLR BLOG URL] ex. rigoneri.tumblr.com'
+TUMBLR_BLOG_URL = 'owenwilliamsnz.tumblr.com'
 TUMBLR_API_URL = 'http://api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
-TUMBLR_API_KEY = '[ENTER TUMBLR API KEY HERE, SEE TUMBLR SETUP INSTRUCTIONS]'
+TUMBLR_API_KEY = 'KAAha84EG32WK6GKrO8BHOCeUQPXNsnZfAKcDNqbPnDtN5J8Yq'
 
 #RSS Feed Integration: (by default use Tumbrl rss feed)
 RSS_FEED_ENABLED = True
@@ -21,7 +21,7 @@ TWITTER_USER_SECRET = 'ErIQgucnrylzGC7q2a8nwm2DtpA3G3Fo61JUVYd0xk'
 
 
 #Github Integration
-GITHUB_INTEGRATION_ENABLED = True
+GITHUB_INTEGRATION_ENABLED = False
 GITHUB_API_URL = 'https://api.github.com/'
 GITHUB_ACCESS_TOKEN = '[ENTER GITHUB ACCESS TOKEN HERE, SEE GITHUB SETUP INSTRUCTIONS]'
 
