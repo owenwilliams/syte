@@ -27,8 +27,7 @@ def compress_styles():
     css_path = 'static/css/'
 
     try:
-        subprocess.check_call(shlex.split('lessc {0} {1}styles-{2}.min.css -yui-compress'
-            .format(less_path, css_path, settings.COMPRESS_REVISION_NUMBER)), shell=True)
+        subprocess.check_call(shlex.split('uglifyjs -o static/js/min/scripts-{0}.min.js static/js/combined.js'.format(settings.COMPRESS_REVISION_NUMBER)), shell=True)
         print 'CSS Styles Generated: styles-{0}.min.css'.format(settings.COMPRESS_REVISION_NUMBER)
     except Exception:
         exc_type, exc_value, exc_traceback = sys.exc_info()
@@ -78,7 +77,7 @@ def compress_js():
 
     try:
         subprocess.check_call(shlex.split('uglifyjs -o static/js/min/scripts-{0}.min.js static/js/combined.js'.format(settings.COMPRESS_REVISION_NUMBER)), shell=True)
-        subprocess.check_call(shlex.split('rm -f static/js/combined.js'))
+        subprocess.check_call(shlex.split('rm -f static/js/combined.js'), shell=True)
         print 'JavaScript Combined and Minified: scripts-{0}.min.js'.format(settings.COMPRESS_REVISION_NUMBER)
     except Exception:
         exc_type, exc_value, exc_traceback = sys.exc_info()

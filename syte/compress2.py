@@ -77,7 +77,7 @@ def compress_js():
     f.close()
 
     try:
-        subprocess.check_call(shlex.split('uglifyjs -o static/js/min/scripts-{0}.min.js static/js/combined.js'.format(settings.COMPRESS_REVISION_NUMBER)), shell=True)
+        subprocess.check_call(shlex.split('uglifyjs -o static/js/min/scripts-{0}.min.js static/js/combined.js'.format(settings.COMPRESS_REVISION_NUMBER)))
         subprocess.check_call(shlex.split('rm -f static/js/combined.js'))
         print 'JavaScript Combined and Minified: scripts-{0}.min.js'.format(settings.COMPRESS_REVISION_NUMBER)
     except Exception:

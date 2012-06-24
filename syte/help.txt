@@ -1,0 +1,2 @@
+CSS Styles Generated: styles-1.0.min.css
+JavaScript Combined and Minified: scripts-1.0.min.js
