@@ -1,11 +1,11 @@
 
-DEPLOYMENT_MODE = 'prod'
+DEPLOYMENT_MODE = 'dev'
 COMPRESS_REVISION_NUMBER = '1.0'
 
 #Blog Integration: Tumblr
-TUMBLR_BLOG_URL = 'owenwilliamsnz.tumblr.com'
+TUMBLR_BLOG_URL = '[ENTER TUMBLR BLOG URL] ex. rigoneri.tumblr.com'
 TUMBLR_API_URL = 'http://api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
-TUMBLR_API_KEY = 'KAAha84EG32WK6GKrO8BHOCeUQPXNsnZfAKcDNqbPnDtN5J8Yq'
+TUMBLR_API_KEY = '[ENTER TUMBLR API KEY HERE, SEE TUMBLR SETUP INSTRUCTIONS]'
 
 #RSS Feed Integration: (by default use Tumbrl rss feed)
 RSS_FEED_ENABLED = True
@@ -14,14 +14,14 @@ RSS_FEED_URL = 'http://{0}/rss'.format(TUMBLR_BLOG_URL)
 #Twitter Integration
 TWITTER_INTEGRATION_ENABLED = True
 TWITTER_API_URL = 'http://api.twitter.com/1/statuses/user_timeline.json?include_rts=false&exclude_replies=true&count=50&screen_name='
-TWITTER_CONSUMER_KEY = 'rR028aGExAfff4MTpSDbg'
-TWITTER_CONSUMER_SECRET = 'e1bFLjLNNkGRGWF0pfwaTqqYtDEKe3qvLUPmkbGG8I'
-TWITTER_USER_KEY = '14767730-3AgE9HQw26VMjJlinw5Lk3QbxlwJp6ECfHwlD6Had'
-TWITTER_USER_SECRET = 'ErIQgucnrylzGC7q2a8nwm2DtpA3G3Fo61JUVYd0xk'
+TWITTER_CONSUMER_KEY = '[ENTER TWITTER CONSUMER KEY HERE, SEE TWITTER SETUP INSTRUCTIONS]'
+TWITTER_CONSUMER_SECRET = '[ENTER TWITTER CONSUMER SECRET HERE, SEE TWITTER SETUP INSTRUCTIONS]'
+TWITTER_USER_KEY = '[ENTER TWITTER USER KEY HERE, SEE TWITTER SETUP INSTRUCTIONS]'
+TWITTER_USER_SECRET = '[ENTER TWITTER USER SECRET HERE, SEE TWITTER SETUP INSTRUCTIONS]'
 
 
 #Github Integration
-GITHUB_INTEGRATION_ENABLED = False
+GITHUB_INTEGRATION_ENABLED = True
 GITHUB_API_URL = 'https://api.github.com/'
 GITHUB_ACCESS_TOKEN = '[ENTER GITHUB ACCESS TOKEN HERE, SEE GITHUB SETUP INSTRUCTIONS]'
 
@@ -33,7 +33,7 @@ GITHUB_OAUTH_ACCESS_TOKEN_URL = 'https://github.com/login/oauth/access_token'
 
 
 #Dribbble Integration
-DRIBBBLE_INTEGRATION_ENABLED = False
+DRIBBBLE_INTEGRATION_ENABLED = True
 DRIBBBLE_API_URL = 'http://api.dribbble.com/players/'
 
 
@@ -60,11 +60,11 @@ DISQUS_SHORTNAME = ''
 
 
 
-if DEPLOYMENT_MODE == 'prod':
+if DEPLOYMENT_MODE == 'dev':
     SITE_ROOT_URI = 'http://127.0.0.1:8000/'
     DEBUG = True
 else:
     DEBUG = False
-    SITE_ROOT_URI = 'http://warm-dusk-4419.herokuapp.com/'
+    SITE_ROOT_URI = '[ENTER PROD URL HERE] ex. http://rigoneri.herokuapp.com/'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
