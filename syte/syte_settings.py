@@ -60,11 +60,11 @@ DISQUS_SHORTNAME = ''
 
 
 
-if DEPLOYMENT_MODE == 'dev':
-    SITE_ROOT_URI = 'http://127.0.0.1:8000/'
+if DEPLOYMENT_MODE == 'prod':
+    SITE_ROOT_URI = 'http://freezing-snow-2048.herokuapp.com'
     DEBUG = True
 else:
     DEBUG = False
-    SITE_ROOT_URI = '[ENTER PROD URL HERE] ex. http://rigoneri.herokuapp.com/'
+    SITE_ROOT_URI = 'http://freezing-snow-2048.herokuapp.com'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
