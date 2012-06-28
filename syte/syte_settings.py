@@ -61,10 +61,10 @@ DISQUS_SHORTNAME = 'owened'
 
 
 if DEPLOYMENT_MODE == 'prod':
-    SITE_ROOT_URI = 'http://freezing-snow-2048.herokuapp.com/'
+    SITE_ROOT_URI = 'http://owened.co.nz/'
     DEBUG = True
 else:
     DEBUG = False
-    SITE_ROOT_URI = 'http://freezing-snow-2048.herokuapp.com/'
+    SITE_ROOT_URI = 'http://owened.co.nz/'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
